@@ -22,15 +22,8 @@ class WeatherAppTests: XCTestCase {
     
     func testColorArrayIsReturned() throws {
         var expected : [CGColor]
-        expected = UIGradients.shared.getColorArrayFromCondition(with: 1000)
-        XCTAssert(expected == UIGradients.shared.sunny, "Incorrect CGColor array returned")
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+        expected = Utilities.shared.getColorArrayFromCondition(with: 1000)
+        XCTAssert(expected == Utilities.shared.sunny, "Incorrect CGColor array returned")
     }
 
 }

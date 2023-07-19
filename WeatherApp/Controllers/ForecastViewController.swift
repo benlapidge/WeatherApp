@@ -65,7 +65,7 @@ class ForecastViewController: UIViewController {
     }
     
 }
-
+// MARK: - UITableView Datasource/Delegate Methods
 extension ForecastViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print(forecast.count)
@@ -94,7 +94,7 @@ extension ForecastViewController: UITableViewDataSource, UITableViewDelegate {
         
         return cell
     }
-    
+    // MARK: - Handles fade animation
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.alpha = 0
         

@@ -13,6 +13,4 @@ class HourForecastTableViewCell: UITableViewCell {
     @IBOutlet weak var conditionString: UILabel!
     @IBOutlet weak var conditonIcon: UIImageView!
     @IBOutlet weak var timeLabel: UILabel!
-
-
 }

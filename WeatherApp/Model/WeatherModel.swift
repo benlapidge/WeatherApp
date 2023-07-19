@@ -10,15 +10,10 @@ import Foundation
 struct HourModel {
     let time: String
     var formattedTime: Date {
-        // Create Date Formatter
-        let dateFormatter = DateFormatter()
-
-        // Set Date Format
-        dateFormatter.dateFormat = "YYYY-MM-dd HH:mm"
-
-        // Convert String to Date
-        if let formattedDate = dateFormatter.date(from: time) {
-            return formattedDate
+        let hourFormatter = DateFormatter()
+        hourFormatter.dateFormat = "YYYY-MM-dd HH:mm"
+        if let formattedHour = hourFormatter.date(from: time) {
+            return formattedHour
         }
         return Date.now
     }
@@ -34,14 +29,8 @@ struct HourModel {
 struct WeatherModel {
     let date: String
     var formattedDate : Date {
-
-        // Create Date Formatter
         let dateFormatter = DateFormatter()
-
-        // Set Date Format
         dateFormatter.dateFormat = "YYYY-MM-dd"
-
-        // Convert String to Date
         if let formattedDate = dateFormatter.date(from: date) {
             return formattedDate
         }

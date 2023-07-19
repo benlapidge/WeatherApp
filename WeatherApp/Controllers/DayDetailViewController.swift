@@ -30,7 +30,9 @@ class DayDetailViewController: UIViewController {
         conditionIcon.image = UIImage(systemName: day?.conditionIcon ?? "cloud")
         maxTempLabel.text = "\(day?.maxtemp_cRounded ?? "00")°C"
         minTempLabel.text = "\(day?.mintemp_cRounded ?? "00")°C"
+        gradientView.bounds = view.bounds
         updateUI(with: Utilities.shared.getColorArrayFromCondition(with: day?.conditionCode ?? 1135))
+        
         // Do any additional setup after loading the view.
         //
     }
